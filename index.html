@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header><img src="logo.png"></header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="About.html">About Photographer's</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section class="banner" id="banner">
+            <div class="container">
+                
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="row">
+                <div class="col50">
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section>
+            <div class="content">
+                <div class="textBox">
+                    <h2 data-text="Freelancer Photographer....">Freelancer Photographer....</h2>
+                </div>
+            </div>
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="macro">Macro</li>
+                <li class="list" data-filter="conceptclick">Concept Click</li>
+                <li class="list" data-filter="nature">Nature</li>
+                <li class="list" data-filter="lightpainting">Light Painting</li>
+                <li class="list" data-filter="animal">Animal</li>
+            </ul>
+            <div class="product">
+                <div class="itemBox macro"><img src="Macro.jpg"></div>
+                <div class="itemBox conceptclick"><img src="Concept Click.jpg"></div>
+                <div class="itemBox nature"><img src="Nature.jpg"></div>
+                <div class="itemBox lightpainting"><img src="LightPainting.jpg"></div>
+                <div class="itemBox animal"><img src="Animal1.jpg"></div>
+                <div class="itemBox macro"><img src="Macro1.jpg"></div>
+                <div class="itemBox conceptclick"><img src="Concept Click1.jpg"></div>
+                <div class="itemBox nature"><img src="Nature1.jpg"></div>
+                <div class="itemBox lightpainting"><img src="LightPainting1.jpg"></div>
+                <div class="itemBox macro"><img src="Macro2.jpg"></div>
+                <div class="itemBox conceptclick"><img src="Concept Click 2.jpg"></div>
+                <div class="itemBox nature"><img src="Nature2.jpg"></div>
+                <div class="itemBox lightpainting"><img src="LightPainting2.jpg"></div>
+                <div class="itemBox animal"><img src="Animal3.jpeg"></div>
+                <div class="itemBox macro"><img src="Macro3.jpg"></div>
+                <div class="itemBox conceptclick"><img src="Concept Click 3.jpg"></div>
+                <div class="itemBox nature"><img src="Nature3.jpg"></div>
+                <div class="itemBox lightpainting"><img src="LightPainting3.jpeg"></div>
+                <div class="itemBox animal"><img src="Animal4.jpeg"></div>
+                <div class="itemBox nature"><img src="Nature4.jpeg"></div>
+                <div class="itemBox nature"><img src="Nature5.jpeg"></div>
+                <div class="itemBox animal"><img src="Animal6.jpeg"></div>
+                <div class="itemBox nature"><img src="Nature6.jpeg"></div>
+                <div class="itemBox animal"><img src="Animal7.jpeg"></div>
+                <div class="itemBox nature"><img src="Nature7.jpeg"></div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" 
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+         $(document).ready(function(){
+             $('.list').click(function(){
+                 const value = $(this).attr('data-filter');
+                 if(value == 'all'){
+                     $('.itemBox').show('1000');
+                 }
+                 else{
+                     $('.itemBox').not('.'+value).hide('1000');
+                     $('.itemBox').filter('.'+value).show('1000');
+                 }
+             })
+
+             $('.list').click(function(){
+                 $(this).addClass('active').siblings().removeClass('active');
+             })
+         })   
+    </script>
+    </body>
+</head>
